@@ -15,7 +15,7 @@ apply plugin: 'application'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
-mainClassName = 'WeatherCheckMain.Application'
+mainClassName = 'WeatherCheck.Application'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -28,6 +28,7 @@ repositories {
 dependencies {
     compile "joda-time:joda-time:2.2"
     compile 'com.google.code.gson:gson:2.7'
+    compile group: 'org.json', name: 'json', version: '20090211'
     // tag::jetty[]
     compile("org.springframework.boot:spring-boot-starter-web") {
         exclude module: "spring-boot-starter-tomcat"
@@ -39,6 +40,8 @@ dependencies {
     // end::actuator[]
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-devtools")
+//    compile("org.springframework.boot:spring-boot-starter-security")
+
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("junit:junit")
 
