@@ -1,4 +1,4 @@
-# RainProof
+# WeatherCheck
 
 Creating a simple Weather WebApp to learn how to develop something from the ground up.
 
